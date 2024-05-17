@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Progress circle</title>
+	<link rel="stylesheet" href="css/zerostyle.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="progress">
+            <p>Progress</p>
+            <div class="progress__con">
+                <div class="progress__con__circle">
+                    <svg width="120" height="120">
+                        <circle class="progress__con__circle-ring" stroke="#005cff" 
+                        stroke-width="10" cx="60" cy="60" r="54" fill="transparent"/>
+                    </svg>
+                </div>
+                <label class="progress__con__buttons">
+                    <label class="progress__con__buttons-num-input-con">
+                        <input type="number" id="percent">
+                        <p for="percent">Value</p>
+                    </label>
+                    <label class="progress__con__buttons-switch">
+                        <input class="progress__con__buttons-switch-input" type="checkbox" id="animation" name="animation">
+                        <span class="progress__con__buttons-switch-slider"></span>
+                        <p for="animation">Animate</p>
+                    </label>
+                    <label class="progress__con__buttons-switch">
+                        <input class="progress__con__buttons-switch-input" type="checkbox" id="visibility" name="visibility">
+                        <span class="progress__con__buttons-switch-slider"></span>
+                        <p for="visibility">Hide</p>
+                    </label>
+                </label>
+            </div>
+        </div>
+        <div class="progress1">
+            <p>Progress</p>
+            <div class="progress1__con">
+                <div class="progress__con__circle">
+                    <svg width="120" height="120">
+                        <circle class="progress__con__circle-ring" stroke="#005cff" 
+                        stroke-width="10" cx="60" cy="60" r="54" fill="transparent"/>
+                    </svg>
+                </div>
+                <label class="progress__con__buttons">
+                    <label class="progress__con__buttons-num-input-con">
+                        <input type="number" id="percent1">
+                        <p for="percent1">Value</p>
+                    </label>
+                    <label class="progress__con__buttons-switch">
+                        <input class="progress__con__buttons-switch-input" type="checkbox" id="animation1" name="animation">
+                        <span class="progress__con__buttons-switch-slider"></span>
+                        <p for="animation1">Animate</p>
+                    </label>
+                    <label class="progress__con__buttons-switch">
+                        <input class="progress__con__buttons-switch-input" type="checkbox" id="visibility1" name="visibility">
+                        <span class="progress__con__buttons-switch-slider"></span>
+                        <p for="visibility1">Hide</p>
+                    </label>
+                </label>
+            </div>
+        </div>
+        
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

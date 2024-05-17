@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Pompador';
+    src: local('Pompador Sample'), local('Pompador-Sample'),
+        url('../fonts/02_APompadourTextSample.otf') format('otf'),
+        url('../fonts/02_APompadourTextSample.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaf0f6;
+    font-family: 'Pompador';
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+.progress{
+    width: 320px;
+    height: 568px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.progress1{
+    width: 568px;
+    height: 320px;
+    display: flex;
+    background-color: white;
+    padding: 20px;
+}
+.progress1__con{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+.progress p{
+    text-align: left;
+}
+.progress__con{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.progress__con__circle{
+    display: flex;
+    justify-content: center;
+}
+.progress__con__circle-ring{
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: stroke-dashoffset 0.3s;
+}
+
+.progress__con__buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 0% 25% 0% 25%;
+}
+.progress__con__buttons label{
+    display: flex;
+    margin-top: 15px;
+}
+.progress__con__buttons-num-input-con{
+    display: inline-block;
+    position: relative;
+}
+.progress__con__buttons-num-input-con input{
+    width: 60px;
+    height: 34px;
+    border-radius: 34px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Pompador';
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+}
+.progress__con__buttons-num-input-con input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.progress__con__buttons-num-input-con p{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.progress__con__buttons-switch{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+.progress__con__buttons-switch p{
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+}
+.progress__con__buttons-switch-input{
+    display: none;
+}
+.progress__con__buttons-switch-slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #dae6ec;
+    border-radius: 34px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.progress__con__buttons-switch-slider::before{
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    left: 4px;
+    bottom: 4px;
+    height: 26px;
+    width: 26px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.progress__con__buttons-switch-input:focus + .progress__con__buttons-switch-slider{
+    box-shadow: 0 0 10px #005cff;
+}
+.progress__con__buttons-switch-input:checked + .progress__con__buttons-switch-slider{
+    background-color: #005cff;
+}
+.progress__con__buttons-switch-input:checked + .progress__con__buttons-switch-slider::before{
+    transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animation {
+    animation: rotate 2s linear infinite;
+    animation-play-state: paused;
+}
+.hide {
+    display: none;
+}
